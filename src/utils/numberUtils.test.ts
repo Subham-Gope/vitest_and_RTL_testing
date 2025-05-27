@@ -63,7 +63,18 @@ describe("All Number related Functions", () => {
       }
     );
 
-    test.each;
+    test.each([
+      [3, true],
+      [5, true],
+      [8, false],
+      [9, false],
+      [12, true],
+    ])(
+      "checking the isOdd(%i) function with multiple values(%s)",
+      (n, expected) => {
+        expect(isOdd(n)).toBe(expected);
+      }
+    );
   });
 
   describe("testing numberUtils.ts functions", () => {
@@ -80,6 +91,34 @@ describe("All Number related Functions", () => {
     test("checking isPrime function not throwing an error", () => {
       expect(() => isPrime(9)).not.toThrowError();
     });
+
+    // testing multiple values at once including error
+
+    test.each([
+      [19, true],
+      [13, true],
+      [18, false],
+      [21, false],
+      [-3, new Error("Negative numbers not allowed")],
+    ])(
+      "checkging isPrime(%i) function with multiple values values(%s)",
+      (n, expected) => {
+        if (expected instanceof Error) {
+          expect(() => isPrime(n)).toThrowError(expected);
+        } else {
+          expect(isPrime(n)).toBe(expected);
+        }
+      }
+    );
+
+    // ////////////////////////////////////////////
+
+    // testing multiple values at once including error
+
+
+test.each([[2,false],[4,false],[57,false],[2,true],[9,false]])("checking the ")
+
+    ////////////////////////////////////////////////////////
   });
 
   describe("testing numberUtils.ts functions", () => {
