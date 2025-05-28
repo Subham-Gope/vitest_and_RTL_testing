@@ -1,0 +1,24 @@
+export function greetUser(name: string, logger: (msg: string) => void): void {
+  logger(`Hello, ${name}`);
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+export const callTwice = (fn: () => void) => {
+  fn();
+  fn();
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+export function repeat(fn: () => void, times: number) {
+  for (let i = 0; i < times; i++) {
+    fn();
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+export function greet(callback: (msg: string) => void) {
+  callback("Hi");
+}
