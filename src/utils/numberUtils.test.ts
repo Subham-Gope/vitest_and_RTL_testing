@@ -115,8 +115,23 @@ describe("All Number related Functions", () => {
 
     // testing multiple values at once including error
 
-
-test.each([[2,false],[4,false],[57,false],[2,true],[9,false]])("checking the ")
+    test.each([
+      [2, true],
+      [4, false],
+      [57, false],
+      [2, true],
+      [9, false],
+      [-3, new Error("Negative numbers not allowed")],
+    ])(
+      "checking the isPrime(%i) function with multiple values(%s) fails",
+      (n, expected) => {
+        if (expected instanceof Error) {
+          expect(() => isPrime(n)).not.toThrowError(expected);
+        } else {
+          expect(isPrime(n)).not.toBe(expected);
+        }
+      }
+    );
 
     ////////////////////////////////////////////////////////
   });
@@ -128,6 +143,40 @@ test.each([[2,false],[4,false],[57,false],[2,true],[9,false]])("checking the ")
     test("checking the clamp function fails", () => {
       expect(clamp(13, 4, 9)).toBe(45);
     });
+
+    // testing multiple values
+    describe("testing multiple values", () => {
+      test.each([
+        [13, 1, 9, 9],
+        [6, 8, 60, 8],
+        [16, 3, 122, 16],
+        [2, 1, 1, 1],
+        [4, 3, 6, 4],
+        [1, 4, 9, 4],
+      ])(
+        "checking the clamp(%i,%i,%i) with multiple values success",
+        (val, min, max, expected) => {
+          expect(clamp(val, min, max)).toBe(expected);
+        }
+      );
+    });
+    //////////////////////////////////
+
+    // testing with multiple values
+
+    test.each([
+      { val: 4, min: 3, max: 7, expected: 3 },
+      { val: 9, min: 3, max: 7, expected: 7 },
+      { val: 4, min: 2, max: 12, expected: 4 },
+      { val: 8, min: 9, max: 13, expected: 9 },
+    ])(
+      "checking the clamp($val,$min,$max) with multiple values fails",
+      (val, min, max, expected) => {
+        expect(clamp(val, min, max)).toBe(expected);
+      }
+    );
+
+    //////////////////////////////////////
   });
 
   describe("testing numberUtils.ts functions", () => {

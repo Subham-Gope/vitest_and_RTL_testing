@@ -20,10 +20,10 @@ export const isPrime = (n: number): boolean => {
 
   for (let i = 3; i < n; i++) {
     if (n % 1 == 0) {
-      return true;
+      return false;
     }
   }
-  return false;
+  return true;
 };
 
 export const clamp = (value: number, min: number, max: number): number => {
