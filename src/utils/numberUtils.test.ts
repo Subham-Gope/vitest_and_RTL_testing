@@ -171,8 +171,8 @@ describe("All Number related Functions", () => {
       { val: 8, min: 9, max: 13, expected: 9 },
     ])(
       "checking the clamp($val,$min,$max) with multiple values fails",
-      (val, min, max, expected) => {
-        expect(clamp(val, min, max)).toBe(expected);
+      ({ val, min, max, expected }) => {
+        expect(clamp(val, min, max)).not.toBe(expected);
       }
     );
 
@@ -186,6 +186,40 @@ describe("All Number related Functions", () => {
     test("checking the average function fails", () => {
       expect(average([2323, 4344, 2, 23, 23])).toBe(3);
     });
+
+    // testing multiple values
+
+    describe("testing the average function with multiple values", () => {
+      test.each([
+        { nums: [1, 2, 3, 4, 5], avg: 3 },
+        { nums: [3, 4, 5, 21], avg: 33 / 4 },
+        { nums: [4, 3, 2, 2, 1, 3], avg: 15 / 6 },
+        { nums: [2, 3, 4, 1], avg: 10 / 4 },
+      ])(
+        "testing the average($nums) with value-$avg success",
+        ({ nums, avg }) => {
+          expect(average(nums)).toBe(avg);
+        }
+      );
+    });
+
+    /////////////////////////////////////
+
+    // testing multiple values
+
+    test.each([
+      { nums: [1, 2, 3, 4, 5], avg: 3 },
+      { nums: [3, 4, 52, 4], avg: 63 / 4 },
+      { nums: [9, 8, 7, 6], avg: 30 / 4 },
+      { nums: [23, 4, 2, 1, 21], avg: 51 / 5 },
+    ])(
+      "checking the average($nums) function with multiple values($avg) fails",
+      ({ nums, avg }) => {
+        expect(average(nums)).not.toBe(avg);
+      }
+    );
+
+    //////////////////////////////////////////////////
   });
 
   describe("testing numberUtils.ts functions", () => {
