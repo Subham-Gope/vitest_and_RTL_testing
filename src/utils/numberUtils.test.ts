@@ -236,5 +236,33 @@ describe("All Number related Functions", () => {
     it("testing the factorial function does not throw error", () => {
       expect(() => factorial(4)).not.toThrowError();
     });
+
+    // testing multiple values
+
+    describe("testing using multiple values using the array syntax", () => {
+      test.each([
+        [4, 24],
+        [5, 120],
+        [6, 720],
+        [7, 5040],
+        [8, 45320],
+        [-4, new Error(`Negative numbers not allowed`)],
+      ])(
+        "checking the factorial(%i) function with value($i)",
+        (num, expected) => {
+          if (expected instanceof Error) {
+            expect(() => factorial(num)).toThrowError(expected);
+          } else {
+            expect(factorial(num)).toBe(expected);
+          }
+        }
+      );
+    });
+
+    ///////////////////////////////////
+
+    // testing with multiple values
+
+    ////////////////////////////////////////////////
   });
 });
