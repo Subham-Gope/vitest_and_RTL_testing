@@ -250,20 +250,92 @@ import {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// describe("async/await", () => {
+//   test("fetchUser", async () => {
+//     const fetchUser = vi
+//       .fn<() => Promise<{ id: number }>>()
+//       .mockResolvedValueOnce({ id: 1 })
+//       .mockResolvedValueOnce({ id: 2 })
+//       .mockResolvedValueOnce({ id: 3 })
+//       .mockResolvedValueOnce({ id: 4 })
+//       .mockResolvedValueOnce({ id: 5 })
+//       .mockResolvedValueOnce({ id: 6 });
+
+//     const id1 = await fetchUser();
+//     const id2 = await fetchUser();
+//     const id3 = await fetchUser();
+//     const id4 = await fetchUser();
+//     const id5 = await fetchUser();
+//     const id6 = await fetchUser();
+
+//     expect(id1).toEqual({ id: 1 });
+//     expect(id2).toEqual({ id: 2 });
+//     expect(id3).toEqual({ id: 3 });
+//     expect(id4).toEqual({ id: 4 });
+//     expect(id5).toEqual({ id: 5 });
+//     expect(id6).toEqual({ id: 6 });
+
+//     expect(fetchUser).toHaveBeenCalledTimes(6);
+//     expect(fetchUser).toHaveBeenCalled();
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// describe("async/await", () => {
+//   test("loadSettings", async () => {
+//     const loadSettings = vi
+//       .fn<() => Promise<string>>()
+//       .mockResolvedValue("loaded");
+
+//     const resolve = await loadSettings();
+
+//     expect(resolve).toBe("loaded");
+//     expect(loadSettings).toHaveBeenCalled();
+//     expect(loadSettings).toHaveBeenCalledTimes(1);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("async/await", () => {
+//   test("getTotal", async () => {
+//     const getTotal = vi
+//       .fn<() => Promise<number>>()
+//       .mockResolvedValueOnce(42)
+//       .mockResolvedValueOnce(45)
+//       .mockResolvedValueOnce(89)
+//       .mockResolvedValueOnce(12)
+//       .mockResolvedValueOnce(32);
+
+//     const call1 = await getTotal();
+//     const call2 = await getTotal();
+//     const call3 = await getTotal();
+//     const call4 = await getTotal();
+//     const call5 = await getTotal();
+
+//     expect(call1).toBe(42);
+//     expect(call2).toBe(45);
+//     expect(call3).toBe(89);
+//     expect(call4).toBe(12);
+//     expect(call5).toBe(32);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////
+
 describe("async/await", () => {
-  test("fetchUser", async () => {
-    const fetchUser = vi
-      .fn<() => Promise<{ id: number }>>()
-      .mockResolvedValueOnce({ id: 1 })
-      .mockResolvedValueOnce({ id: 2 })
-      .mockResolvedValueOnce({ id: 3 });
+  test("failRequest", async () => {
+    const promiseRequest = vi
+      .fn<() => Promise<string>>()
+      .mockRejectedValueOnce("failed")
+      .mockResolvedValueOnce("success")
+      .mockRejectedValueOnce("failed2")
+      .mockResolvedValueOnce("success2")
+      .mockRejectedValueOnce("failed3")
+      .mockResolvedValueOnce("success3");
 
-    const id1 = await fetchUser();
-    const id2 = await fetchUser();
-    const id3 = await fetchUser();
-
-    expect(id1).toEqual({ id: 1 });
-    expect(id2).toEqual({ id: 2 });
-    expect(id3).toEqual({ id: 3 });
+    await expect(promiseRequest()).rejects.toThrow("failed");
+    await expect(promiseRequest()).resolves.toBe("success");
   });
 });
