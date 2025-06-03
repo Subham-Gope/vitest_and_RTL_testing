@@ -22,3 +22,12 @@ export function repeat(fn: () => void, times: number) {
 export function greet(callback: (msg: string) => void) {
   callback("Hi");
 }
+
+//////////////////////////////////////////////////////////////////////////
+
+export const filterNumbers = (
+  arr: number[],
+  predicate: (n: number) => boolean
+): number[] => {
+  return arr.filter(predicate);
+};
