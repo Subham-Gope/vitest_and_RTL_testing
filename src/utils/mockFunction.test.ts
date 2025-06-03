@@ -337,5 +337,9 @@ describe("async/await", () => {
 
     await expect(promiseRequest()).rejects.toThrow("failed");
     await expect(promiseRequest()).resolves.toBe("success");
+    await expect(promiseRequest()).rejects.toThrow("failed2");
+    await expect(promiseRequest()).resolves.toBe("success2");
+    await expect(promiseRequest()).rejects.toThrow("failed3");
+    await expect(promiseRequest()).resolves.toBe("success3");
   });
 });
