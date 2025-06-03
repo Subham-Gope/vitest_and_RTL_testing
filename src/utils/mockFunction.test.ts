@@ -108,13 +108,162 @@ import {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-describe("assignment 1", () => {
-  test("notifier", () => {
-    const notifier = vi.fn<(mssg: string) => void>();
-    notifier("message sent");
+// describe("assignment 1", () => {
+//   test("notifier", () => {
+//     const notifier = vi.fn<(mssg: string) => void>();
+//     notifier("message sent");
+//     notifier("hello");
+//     notifier("hi");
 
-    expect(notifier).toHaveBeenCalledWith("message sent");
-    expect(notifier).toHaveBeenCalled();
-    expect(notifier).toHaveBeenCalledTimes(1);
+//     expect(notifier).toHaveBeenCalledWith("message sent");
+//     expect(notifier).toHaveBeenCalled();
+//     expect(notifier).toHaveBeenCalledTimes(3);
+//     expect(notifier).toHaveBeenNthCalledWith(2, "hello");
+//     expect(notifier).toHaveBeenNthCalledWith(1, "message sent");
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assigment 2", () => {
+//   test("warnUser", () => {
+//     const warnUser = vi.fn<(msg: string, n: number) => [string, number]>();
+
+//     warnUser("server error", 500);
+//     warnUser("not implemented", 501);
+//     warnUser("Gateway Timeout", 504);
+//     warnUser("Moved Permanently", 301);
+//     warnUser("Found", 302);
+//     warnUser("Not Modified", 304);
+
+//     expect(warnUser).toHaveBeenCalled();
+//     expect(warnUser).toHaveBeenCalledTimes(6);
+//     expect(warnUser).toHaveBeenCalledWith("server error", 500);
+//     expect(warnUser).toHaveBeenNthCalledWith(5, "Found", 302);
+//     expect(warnUser).toHaveBeenNthCalledWith(2, "not implemented", 501);
+//     expect(warnUser).toHaveBeenNthCalledWith(3, "Gateway Timeout", 504);
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("clickHandler", () => {
+//     const clickHandler = vi.fn<(event: { target: string }) => void>();
+//     clickHandler({ target: "button" });
+//     clickHandler({ target: "div" });
+//     clickHandler({ target: "form" });
+//     clickHandler({ target: "span" });
+//     clickHandler({ target: "h1" });
+
+//     expect(clickHandler).toHaveBeenCalled();
+//     expect(clickHandler).toHaveBeenNthCalledWith(2, { target: "div" });
+//     expect(clickHandler).toHaveBeenCalledTimes(5);
+//     expect(clickHandler).toHaveBeenCalledWith({ target: "form" });
+//     expect(clickHandler.mock.calls[0][0].target).toBe("button");
+//     expect(clickHandler.mock.calls[1][0].target).toBe("div");
+//     expect(clickHandler.mock.calls[2][0].target).toBe("form");
+//     expect(clickHandler.mock.calls[3][0].target).toBe("span");
+//     expect(clickHandler.mock.calls[4][0].target).toBe("h1");
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("getRole", () => {
+//     const getRole = vi
+//       .fn<() => string>()
+//       .mockReturnValueOnce("admin")
+//       .mockReturnValueOnce("user")
+//       .mockReturnValueOnce("scammer")
+//       .mockReturnValueOnce("new user");
+
+//     expect(getRole()).toBe("admin");
+//     expect(getRole()).toBe("user");
+//     expect(getRole()).toBe("scammer");
+//     expect(getRole).toBe("new user");
+//     expect(getRole).toHaveBeenCalled();
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 5", () => {
+//   test("getStatus", () => {
+//     const getStatus = vi
+//       .fn<() => string>()
+//       .mockReturnValueOnce("online")
+//       .mockReturnValueOnce("offline")
+//       .mockReturnValueOnce("hacked")
+//       .mockReturnValueOnce("scammed");
+
+//     expect(getStatus()).toBe("online");
+//     expect(getStatus()).toBe("offline");
+//     expect(getStatus()).toBe("hacked");
+//     expect(getStatus()).toBe("scammed");
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 6", () => {
+//   test("getAge", () => {
+//     const getAge = vi
+//       .fn<() => number>()
+//       .mockReturnValueOnce(12)
+//       .mockReturnValueOnce(30)
+//       .mockReturnValueOnce(45)
+//       .mockReturnValueOnce(67);
+
+//     expect(getAge()).toBe(12);
+//     expect(getAge()).toBe(30);
+//     expect(getAge()).toBe(45);
+//     expect(getAge()).toBe(67);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("getStep", () => {
+//   test("getTest", () => {
+//     const getStep = vi
+//       .fn<() => string>()
+//       .mockReturnValueOnce("first")
+//       .mockReturnValueOnce("second")
+//       .mockReturnValueOnce("third")
+//       .mockReturnValueOnce("fourth");
+
+//     expect(getStep()).toBe("first");
+//     expect(getStep()).toBe("second");
+//     expect(getStep()).toBe("third");
+//     expect(getStep()).toBe("fourth");
+
+//     expect(getStep).toHaveBeenCalled();
+//     expect(getStep).toHaveBeenCalledTimes(4);
+//     expect(getStep).toHaveBeenCalledWith("first");
+//     expect(getStep).toHaveBeenCalledWith("second");
+//     expect(getStep).toHaveBeenCalledWith("third");
+//     expect(getStep).toHaveBeenCalledWith("fourth");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+describe("async/await", () => {
+  test("fetchUser", async () => {
+    const fetchUser = vi
+      .fn<() => Promise<{ id: number }>>()
+      .mockResolvedValueOnce({ id: 1 })
+      .mockResolvedValueOnce({ id: 2 })
+      .mockResolvedValueOnce({ id: 3 });
+
+    const id1 = await fetchUser();
+    const id2 = await fetchUser();
+    const id3 = await fetchUser();
+
+    expect(id1).toEqual({ id: 1 });
+    expect(id2).toEqual({ id: 2 });
+    expect(id3).toEqual({ id: 3 });
   });
 });
