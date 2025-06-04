@@ -1,4 +1,4 @@
-import { describe, it, expect, test, vi } from "vitest";
+import { describe, it, expect, test, vi, type Mock } from "vitest";
 import {
   callTwice,
   filterNumbers,
@@ -324,22 +324,115 @@ import {
 
 ///////////////////////////////////////////////////////////////////////////////
 
-describe("async/await", () => {
-  test("failRequest", async () => {
-    const promiseRequest = vi
-      .fn<() => Promise<string>>()
-      .mockRejectedValueOnce("failed")
-      .mockResolvedValueOnce("success")
-      .mockRejectedValueOnce("failed2")
-      .mockResolvedValueOnce("success2")
-      .mockRejectedValueOnce("failed3")
-      .mockResolvedValueOnce("success3");
+// describe("async/await", () => {
+//   test("failRequest", async () => {
+//     const promiseRequest = vi
+//       .fn<() => Promise<string>>()
+//       .mockRejectedValueOnce("failed")
+//       .mockResolvedValueOnce("success")
+//       .mockRejectedValueOnce("failed2")
+//       .mockResolvedValueOnce("success2")
+//       .mockRejectedValueOnce("failed3")
+//       .mockResolvedValueOnce("success3")
+//       .mockRejectedValueOnce("failed4")
+//       .mockResolvedValueOnce("success4");
 
-    await expect(promiseRequest()).rejects.toThrow("failed");
-    await expect(promiseRequest()).resolves.toBe("success");
-    await expect(promiseRequest()).rejects.toThrow("failed2");
-    await expect(promiseRequest()).resolves.toBe("success2");
-    await expect(promiseRequest()).rejects.toThrow("failed3");
-    await expect(promiseRequest()).resolves.toBe("success3");
-  });
-});
+//     await expect(promiseRequest()).rejects.toThrow("failed");
+//     await expect(promiseRequest()).resolves.toBe("success");
+//     await expect(promiseRequest()).rejects.toThrow("failed2");
+//     await expect(promiseRequest()).resolves.toBe("success2");
+//     await expect(promiseRequest()).rejects.toThrow("failed3");
+//     await expect(promiseRequest()).resolves.toBe("success3");
+//     await expect(promiseRequest()).rejects.toThrow("failed4");
+//     await expect(promiseRequest()).resolves.toBe("success4");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment", () => {
+//   test("getNextStage", () => {
+//     const getNextStage = vi
+//       .fn<()=>string>()
+//       .mockReturnValueOnce("loading")
+//       .mockReturnValueOnce("ready");
+
+//     expect(getNextStage()).toBe("loading");
+//     expect(getNextStage()).toBe("ready");
+//   });
+// });
+
+/////////////////////////////////////////////////////////////
+
+// describe("assignment 1", () => {
+//   test("stepRunner", () => {
+//     const stepRunner = vi
+//       .fn<()=>string>()
+//       .mockReturnValueOnce("start")
+//       .mockReturnValueOnce("middle")
+//       .mockReturnValueOnce("end");
+
+//     expect(stepRunner()).toBe("start");
+//     expect(stepRunner()).toBe("middle");
+//     expect(stepRunner()).toBe("end");
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("randomizer", () => {
+//     const randomizer = vi
+//       .fn<() => number>()
+//       .mockReturnValueOnce(0.1)
+//       .mockReturnValueOnce(0.9);
+
+//     expect(randomizer()).toBe(0.1);
+//     expect(randomizer()).toBe(0.9);
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("pollAPI", async () => {
+//     const pollAPI = vi
+//       .fn<() => Promise<string>>()
+//       .mockResolvedValueOnce("waiting")
+//       .mockResolvedValueOnce("done");
+
+//     await expect(pollAPI()).resolves.toBe("waiting");
+//     await expect(pollAPI()).resolves.toBe("done");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////
+
+// describe("mock.calls", () => {
+//   test("logAction", () => {
+//     const logAction: (event: string, source: string) => void = vi.fn();
+
+//     logAction("click", "button");
+//     logAction("hover", "div");
+//     logAction("mouse enter", "span");
+
+//     expect(logAction.mock.calls.length).toBe(3);
+//     expect(logAction.mock.calls[0]).toEqual(["click", "button"]);
+//     expect(logAction.mock.calls[0][1]).toBe("button");
+//     expect(logAction.mock.calls[1].length).toBe(2);
+//     expect(logAction.mock.calls[2][0]).toBe("mouse enter");
+//     expect(logAction.mock.calls[2]).toEqual(["mouse enter", "span"]);
+//     expect(logAction.mock.calls[1]).toEqual(["hover", "div"]);
+//   });
+// });
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+describe("assigment 1",()=>{
+  test("captureData",()=>{
+    const captureDate: (id:number, type:string)=>void = vi.fn();
+
+    
+  })
+})
