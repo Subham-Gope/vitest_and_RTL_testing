@@ -426,13 +426,59 @@ import {
 //   });
 // });
 
-
 //////////////////////////////////////////////////////////////////////////////////
 
-describe("assigment 1",()=>{
-  test("captureData",()=>{
-    const captureDate: (id:number, type:string)=>void = vi.fn();
+// describe("assigment 1", () => {
+//   test("captureData", () => {
+//     const captureDate: (id: number, type: string) => void = vi.fn();
 
-    
-  })
-})
+//     captureDate(5, "video");
+//     captureDate(9, "music");
+
+//     expect(captureDate.mock.calls[0]).toEqual([5, "video"]);
+//     expect(captureDate.mock.calls[0][1]).toBe("video");
+//     expect(captureDate.mock.calls[1]).toEqual([9, "music"]);
+//     expect(captureDate.mock.calls[1][0].toBe(9));
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("logAttempts", () => {
+//     const logAttempts: (attempt: number) => void = vi.fn();
+
+//     logAttempts(2);
+//     logAttempts(4);
+//     logAttempts(4);
+//     logAttempts(1);
+//     logAttempts(5);
+
+//     expect(logAttempts.mock.calls[0]).toEqual([2]);
+//     expect(logAttempts.mock.calls[0][0]).toBe(2);
+//     expect(logAttempts.mock.calls[2]).toEqual([4]);
+//     expect(logAttempts.mock.calls[4][0]).toBe(5);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("saveInput", () => {
+//     const saveInput: (value: { field: string }) => void = vi.fn();
+
+//     saveInput({ field: "email" });
+//     saveInput({ field: "name" });
+//     saveInput({ field: "message" });
+//     saveInput({ field: "phone" });
+
+//     expect(saveInput.mock.calls[0]).toEqual([{ field: "email" }]);
+//     expect(saveInput.mock.calls[1][0]).toEqual({ field: "name" });
+//     expect(saveInput.mock.calls[2][0].field).toBe("message");
+//     expect(saveInput.mock.calls[3]).toEqual([{ field: "phone" }]);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
