@@ -481,4 +481,235 @@ import {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// describe("track mock can be cleared", () => {
+//   test("track", () => {
+//     const track: () => void = vi.fn();
+//     track();
+//     expect(track).toHaveBeenCalledTimes(1);
 
+//     track.mockClear();
+//     expect(track).not.toHaveBeenCalled();
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 1", () => {
+//   test("load", () => {
+//     const load: () => string = vi.fn().mockReturnValueOnce("loaded");
+
+//     expect(load()).toBe("loaded");
+
+//     load.mockReset();
+
+//     expect(load()).not.toBe("loaded");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("fn", () => {
+//     const fn: () => string = vi.fn().mockReturnValue("ready");
+
+//     expect(fn()).toBe("ready");
+
+//     expect(fn).toHaveBeenCalled();
+
+//     fn.mockReset();
+
+//     expect(fn).not.toHaveBeenCalled();
+//     expect(fn()).toBe(undefined);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("boot", () => {
+//     const boot = vi.fn<() => string>().mockReturnValue("ok");
+
+//     boot();
+//     expect(boot).toHaveBeenCalled();
+//     expect(boot()).toBe("ok");
+
+//     boot.mockReset();
+
+//     expect(boot).not.toHaveBeenCalled();
+//     expect(boot()).toBe(undefined);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("auth", () => {
+//     const auth: () => boolean = vi.fn().mockReturnValue(true);
+
+//     auth();
+//     expect(auth).toHaveBeenCalled();
+//     expect(auth()).toBe(true);
+
+//     auth.mockReset();
+
+//     auth();
+//     expect(auth).toHaveBeenCalled();
+//     expect(auth()).toBe(undefined);
+//   });
+// });
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 5", () => {
+//   test("auth", () => {
+//     const auth: () => boolean = vi.fn().mockReturnValue(true);
+
+//     auth();
+//     expect(auth).toHaveBeenCalled();
+//     expect(auth()).toBe(true);
+
+//     auth.mockClear();
+
+//     expect(auth.mock.calls.length).toBe(0);
+//     expect(auth()).toBe(true);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 5", () => {
+//   test("first", () => {
+//     const first: () => void = vi.fn();
+
+//     const second: () => void = vi.fn();
+
+//     first();
+//     first();
+
+//     second();
+//     second();
+
+//     expect(first.mock.calls.length).toBe(2);
+//     expect(second.mock.calls.length).toBe(2);
+
+//     vi.clearAllMocks();
+
+//     expect(first.mock.calls.length).toBe(0);
+//     expect(second.mock.calls.length).toBe(0);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 6", () => {
+//   test("relogin", () => {
+//     const relogin: () => string = vi.fn().mockReturnValue("user123");
+
+//     expect(relogin()).toBe("user123");
+
+//     vi.resetAllMocks();
+
+//     expect(relogin()).toBe(undefined);
+//     expect(relogin()).not.toBe("user123");
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("custom mock function", () => {
+//   test("greeter", () => {
+//     const greeter: (name: string) => string = vi.fn((name) => `hello ${name}`);
+
+//     expect(greeter("subham")).toBe("hello subham");
+//     expect(greeter).toHaveBeenCalledWith("subham");
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 1", () => {
+//   test("double", () => {
+//     const double: (x: number) => number = vi.fn((x) => x * 2);
+
+//     expect(double(3)).toBe(6);
+//     expect(double).toHaveBeenCalledWith(3);
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("isEven", () => {
+//     const isEven: (n: number) => boolean = vi.fn((n) => n % 2 == 0);
+
+//     expect(isEven(2)).toBe(true);
+//     expect(isEven(3)).not.toBe(true);
+//     expect(isEven).toHaveBeenCalledWith(3);
+//     expect(isEven).toHaveBeenNthCalledWith(1, 2);
+//     expect(isEven).toHaveBeenNthCalledWith(2, 3);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("greetByTime", () => {
+//     const greetByTime: (hour: number) => string = vi.fn((hour) => {
+//       if (hour < 12) {
+//         return `Good Morning`;
+//       }
+//       return `Good Night`;
+//     });
+
+//     expect(greetByTime(10)).toBe(`Good Morning`);
+//     expect(greetByTime(18)).toBe("Good Night");
+
+//     expect(greetByTime).toHaveBeenCalled();
+//     expect(greetByTime).toHaveBeenNthCalledWith(2, 18);
+//     expect(greetByTime).toHaveBeenCalledWith(10);
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("concatStrings", () => {
+//     const concatStrings: (a: string, b: string) => string = vi.fn(
+//       (a, b) => `${a}-${b}`
+//     );
+
+//     expect(concatStrings("hello", "world")).toBe("hello-world");
+//     expect(concatStrings("hi", "there")).toBe("hi-there");
+//     expect(concatStrings).toHaveBeenCalledWith("hello", "world");
+//     expect(concatStrings).toHaveBeenNthCalledWith(1, "hello", "world");
+//     expect(concatStrings).toHaveBeenNthCalledWith(2, "hi", "there");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("spy", () => {
+//   const user = {
+//     getName: (msg: string): string => `hello ${msg}`,
+//   };
+
+//   test("assignment 1", () => {
+//     const spy = vi.spyOn(user, "getName");
+//     expect(user.getName("Lord")).toBe("hello Lord");
+//     expect(spy).toHaveBeenCalledWith("Lord");
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+describe("assignment 2", () => {
+  const calculator = {
+    add(a: number, b: number): number {
+      return a + b;
+    },
+  };
+
+  const spy = vi.spyOn(calculator, "add");
+  expect(calculator.add(8, 9)).toBe(17);
+  expect(spy).toHaveBeenCalledWith(8, 9);
+});
