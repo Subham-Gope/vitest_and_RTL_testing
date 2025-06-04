@@ -711,5 +711,9 @@ describe("assignment 2", () => {
 
   const spy = vi.spyOn(calculator, "add");
   expect(calculator.add(8, 9)).toBe(17);
+  expect(calculator.add(4, 5)).toBe(9);
+  expect(calculator.add(2, 9)).toBe(11);
   expect(spy).toHaveBeenCalledWith(8, 9);
+  expect(spy).toHaveBeenNthCalledWith(2, 4, 5);
+  expect(spy).toHaveBeenNthCalledWith(3, 2, 9);
 });
