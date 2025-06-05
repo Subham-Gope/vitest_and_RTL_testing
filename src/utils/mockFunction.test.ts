@@ -697,23 +697,229 @@ import {
 //     const spy = vi.spyOn(user, "getName");
 //     expect(user.getName("Lord")).toBe("hello Lord");
 //     expect(spy).toHaveBeenCalledWith("Lord");
+
+//     spy.mockReturnValue("Bob");
+//     expect(user.getName("Lord")).toBe("Bob");
+//     spy.mockRestore();
+//     expect(user.getName("Lord")).toBe("hello Lord");
 //   });
 // });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-describe("assignment 2", () => {
-  const calculator = {
-    add(a: number, b: number): number {
-      return a + b;
-    },
-  };
+// describe("assignment 2", () => {
+//   test("calculator", () => {
+//     const calculator = {
+//       add(a: number, b: number): number {
+//         return a + b;
+//       },
+//     };
 
-  const spy = vi.spyOn(calculator, "add");
-  expect(calculator.add(8, 9)).toBe(17);
-  expect(calculator.add(4, 5)).toBe(9);
-  expect(calculator.add(2, 9)).toBe(11);
-  expect(spy).toHaveBeenCalledWith(8, 9);
-  expect(spy).toHaveBeenNthCalledWith(2, 4, 5);
-  expect(spy).toHaveBeenNthCalledWith(3, 2, 9);
-});
+//     const spy = vi.spyOn(calculator, "add");
+//     expect(calculator.add(8, 9)).toBe(17);
+//     expect(calculator.add(4, 5)).toBe(9);
+//     expect(calculator.add(2, 9)).toBe(11);
+//     expect(spy).toHaveBeenCalledWith(8, 9);
+//     expect(spy).toHaveBeenNthCalledWith(2, 4, 5);
+//     expect(spy).toHaveBeenNthCalledWith(3, 2, 9);
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("test spy on Math.random", () => {
+//     const spy = vi.spyOn(Math, "random").mockReturnValue(0.42);
+
+//     expect(Math.random()).toBe(0.42);
+//     expect(spy).toHaveBeenCalled();
+
+//     spy.mockRestore();
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("console.log", () => {
+//     const spy = vi.spyOn(console, "log");
+
+//     expect(console.log("test")).toBe(undefined);
+//     expect(console.log("hello")).toBe(undefined);
+//     expect(console.log("hi")).toBe(undefined);
+//     expect(spy).toHaveBeenNthCalledWith(1, "test");
+//     expect(spy).toHaveBeenNthCalledWith(2, "hello");
+//     expect(spy).toHaveBeenNthCalledWith(3, "hi");
+//     spy.mockRestore()
+//   });
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("Date.now", () => {
+//     const spy = vi.spyOn(Date, "now").mockReturnValue(123456789);
+
+//     expect(Date.now()).toBe(123456789);
+//     spy.mockRestore();
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("utils", () => {
+//     const utils = {
+//       square: (x: number) => x * x,
+//     };
+
+//     const spy = vi.spyOn(utils, "square");
+
+//     expect(utils.square(4)).toBe(16);
+//     expect(utils.square(2)).toBe(4);
+//     expect(utils.square(3)).toBe(9);
+//     expect(utils.square(5)).toBe(25);
+
+//     spy.mockReturnValue(100);
+//     expect(utils.square(5)).toBe(100);
+//     spy.mockRestore();
+//     expect(utils.square(5)).toBe(25);
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("setTimeout", () => {
+//     const spy = vi.spyOn(global, "setTimeout");
+//     const callback: () => void = () => {};
+
+//     expect(setTimeout(callback, 1000)).not.toBe(undefined);
+//     expect(spy).toHaveBeenCalledWith(callback, 1000);
+//     spy.mockRestore();
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 5", () => {
+//   test("Math.random", () => {
+//     const spy = vi.spyOn(Math, "random").mockReturnValue(0.42);
+//     expect(Math.random()).toBe(0.42);
+//     spy.mockRestore();
+//     expect(Math.random()).not.toBe(0.42);
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("mockImplementationOnce", () => {
+//   const fn = vi.fn();
+
+//   fn.mockImplementationOnce(() => "first");
+//   fn.mockImplementationOnce(() => "second");
+
+//   expect(fn()).toBe("first");
+//   expect(fn()).toBe("second");
+
+// });
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 2", () => {
+//   test("toggleState", () => {
+//     const toggleState = vi.fn<() => boolean>();
+
+//     toggleState
+//       .mockImplementationOnce(() => true)
+//       .mockImplementationOnce(() => false);
+//     expect(toggleState()).toBe(true);
+//     expect(toggleState()).toBe(false);
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 3", () => {
+//   test("retryFn", () => {
+//     const retryFn = vi.fn<() => string>();
+
+//     retryFn
+//       .mockImplementationOnce(() => "try 1")
+//       .mockImplementationOnce(() => "try 2");
+//     expect(retryFn()).toBe("try 1");
+//     expect(retryFn()).toBe("try 2");
+//     expect(retryFn).toHaveBeenCalledWith();
+//   });
+// });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 4", () => {
+//   test("fetchUser", async () => {
+//     const fetchUser = vi.fn<() => Promise<string>>();
+
+//     fetchUser
+//       .mockImplementationOnce(() => Promise.reject("error"))
+//       .mockImplementationOnce(() => Promise.resolve("user found"))
+//       .mockImplementationOnce(() => Promise.resolve("account created"))
+//       .mockImplementationOnce(() => Promise.reject("credentials wrong"))
+//       .mockImplementationOnce(() => Promise.resolve("sign up complete"))
+//       .mockImplementationOnce(() => Promise.reject("server error 500"));
+
+//     await expect(fetchUser()).rejects.toThrow("error");
+//     await expect(fetchUser()).resolves.toBe("user found");
+//     await expect(fetchUser()).resolves.toBe("account created");
+//     await expect(fetchUser()).rejects.toThrow("credentials wrong");
+//     await expect(fetchUser()).resolves.toBe("sign up complete");
+//     await expect(fetchUser()).rejects.toThrow("server error 500");
+//   });
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 5", () => {
+//   test("calculate", () => {
+//     const calculate = vi.fn<(a: number, b: number) => number>();
+
+//     calculate
+//       .mockImplementationOnce((a, b) => a + b)
+//       .mockImplementationOnce((a, b) => a * b);
+
+//     expect(calculate(5, 6)).toBe(11);
+//     expect(calculate(7, 3)).toBe(21);
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 6", () => {
+//   test("isLoggedIn", () => {
+//     const isLoggedIn = vi.fn<() => boolean>();
+
+//     isLoggedIn
+//       .mockImplementationOnce(() => false)
+//       .mockImplementationOnce(() => true);
+
+//     expect(isLoggedIn()).toBe(false);
+//     expect(isLoggedIn()).toBe(true);
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// describe("assignment 7", () => {
+//   test("getMessage", () => {
+//     const getMessage = vi.fn<() => string>();
+
+//     getMessage
+//       .mockImplementationOnce(() => "loading...")
+//       .mockImplementationOnce(() => "done!");
+
+//     expect(getMessage()).toBe("loading...");
+//     expect(getMessage()).toBe("done!");
+//   });
+// });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
