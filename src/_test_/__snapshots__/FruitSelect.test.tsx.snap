@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FruitSelect.tsx > let's you select Banana 1`] = `
+<div>
+  <div
+    class="h-screen w-screen flex"
+  >
+    <div
+      class="flex flex-col gap-4 items-center justify-center p-12 m-auto bg-amber-5 w-[300px] h-[300px] bg-red-300"
+    >
+      <label
+        class="text-3xl text-gray-50"
+        for="fruits"
+      >
+        Fruits Option
+      </label>
+      <select
+        class="text-xl text-gray-100 bg-gray-800 p-4 rounded"
+        id="fruits"
+        name="Fruits"
+        required=""
+      >
+        <option
+          class="text-[16px] text-gray-400"
+          disabled=""
+          value=""
+        >
+          Select a Fruit
+        </option>
+        <option
+          class="text-[16px] "
+          value="Banana"
+        >
+          Banana
+        </option>
+        <option
+          class="text-[16px]"
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          class="text-[16px]"
+          value="Jack Fruit"
+        >
+          Jack Fruit
+        </option>
+        <option
+          class="text-[16px]"
+          value="Dragon Fruit"
+        >
+          Dragon Fruit
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;
