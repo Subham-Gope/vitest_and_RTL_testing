@@ -4,7 +4,9 @@
 
 // test("calls onGreet with Alice", () => {
 //   const mockGreet = vi.fn<(name: string) => void>();
-//   render(<Greeting onGreet={mockGreet} />);
+//   const { container } = render(<Greeting onGreet={mockGreet} />);
+
+//   expect(container).toMatchSnapshot();
 
 //   fireEvent.click(screen.getByText("Greet"));
 
