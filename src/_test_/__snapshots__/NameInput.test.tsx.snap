@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NameInput.tsx > testing for the presence of a input filed with placeholder text of 'Enter name' 1`] = `
+<div>
+  <input
+    placeholder="Enter Name"
+    type="text"
+  />
+</div>
+`;

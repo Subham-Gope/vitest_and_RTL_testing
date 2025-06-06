@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the SimpleButton.tsx file > testing the component to return 'Click Me'  1`] = `
+<div>
+  <button>
+    Click Me
+  </button>
+</div>
+`;

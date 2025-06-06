@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing the Welcome.tsx > renders the welcome message 1`] = `
+<div>
+  <h1>
+    Welcome to React Testing
+  </h1>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing the SubmitButton.tsx component > find button by role 1`] = `
+<div>
+  <button>
+    Submit
+  </button>
+</div>
+`;

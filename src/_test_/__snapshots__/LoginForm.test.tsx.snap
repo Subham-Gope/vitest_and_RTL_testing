@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the LoginForm.tsx component > lets user type and submit 1`] = `
+<div>
+  <div>
+    <input
+      placeholder="username"
+      type="text"
+    />
+    <button>
+      Submit
+    </button>
+  </div>
+</div>
+`;

@@ -4,7 +4,9 @@
 
 // describe("Paragraphs", () => {
 //   test("renders two paragraphs", () => {
-//     render(<Paragraphs />);
+//    const  {container}=  render(<Paragraphs />);
+
+//    expect(container).toMatchSnapshot();
 
 //     const p1 = screen.getByText("One");
 //     const p2 = screen.getByText("Two");

@@ -4,7 +4,9 @@
 
 // describe("NameInput.tsx", () => {
 //   test("testing for the presence of a input filed with placeholder text of 'Enter name'", () => {
-//     render(<NameInput />);
+//     const { container } = render(<NameInput />);
+
+//     expect(container).toMatchSnapshot();
 
 //     const inputEl = screen.getByPlaceholderText("Enter Name");
 

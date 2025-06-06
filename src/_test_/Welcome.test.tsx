@@ -4,7 +4,9 @@
 
 // describe("testing the Welcome.tsx", () => {
 //   test("renders the welcome message", () => {
-//     render(<Welcome />);
+//     const { container } = render(<Welcome />);
+
+//     expect(container).toMatchSnapshot();
 
 //     const message = screen.getByText("Welcome to React Testing");
 //     expect(message).toBeInTheDocument();

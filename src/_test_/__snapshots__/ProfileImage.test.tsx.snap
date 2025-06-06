@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing the ProfileImage.tsx file > testing if the img tag has the alt title of 'profile pic 1`] = `
+<div>
+  <img
+    alt="profile pic"
+    src="https://www.pexels.com/photo/elegant-museum-interior-with-classical-sculpture-29844114/"
+  />
+</div>
+`;

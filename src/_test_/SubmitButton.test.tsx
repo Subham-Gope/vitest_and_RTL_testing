@@ -4,7 +4,10 @@
 
 // describe("testing the SubmitButton.tsx component", () => {
 //   test("find button by role", () => {
-//     render(<SubmitButton />);
+//     const { container } = render(<SubmitButton />);
+
+//     expect(container).toMatchSnapshot();
+
 //     const btn = screen.getByRole("button");
 //     expect(btn).toBeInTheDocument();
 //   });

@@ -4,8 +4,9 @@
 
 // describe("testing the ProfileImage.tsx file", () => {
 //   test("testing if the img tag has the alt title of 'profile pic", () => {
-//     render(<ProfileImage />);
+//     const { container } = render(<ProfileImage />);
 
+//     expect(container).toMatchSnapshot();
 //     const img = screen.getByAltText("profile pic");
 //     expect(img).toBeInTheDocument();
 //   });

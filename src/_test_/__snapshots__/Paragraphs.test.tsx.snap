@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Paragraphs > renders two paragraphs 1`] = `
+<div>
+  <div>
+    <p>
+      One
+    </p>
+    <p>
+      Two
+    </p>
+  </div>
+</div>
+`;
