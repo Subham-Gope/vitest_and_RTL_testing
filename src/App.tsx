@@ -1,10 +1,10 @@
 import React from "react";
-import Greeting from "./components/Greeting";
+import FruitSelect from "./components/FruitSelect";
 
 const App: React.FC = () => {
   return (
     <>
-      <Greeting />
+      <FruitSelect />
     </>
   );
 };

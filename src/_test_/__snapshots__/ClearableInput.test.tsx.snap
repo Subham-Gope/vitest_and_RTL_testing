@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ClearableInpt.tsx file > let's user clear the input 1`] = `
+<div>
+  <div>
+    <input
+      placeholder="Enter Email"
+      type="text"
+      value=""
+    />
+    <button>
+      Clear
+    </button>
+  </div>
+</div>
+`;
