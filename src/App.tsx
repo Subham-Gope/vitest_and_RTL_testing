@@ -1,10 +1,11 @@
 import React from "react";
-import FruitSelect from "./components/FruitSelect";
+
+import TabForm from "./components/TabForm";
 
 const App: React.FC = () => {
   return (
     <>
-      <FruitSelect />
+      <TabForm message={"This a TabForm"} />
     </>
   );
 };

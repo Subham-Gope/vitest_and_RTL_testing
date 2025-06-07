@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the TabForm.tsx file > let's user move focus from one input to next 1`] = `
+<div>
+  <div>
+    <p>
+      Hello there, this is a TabForm Component Test
+    </p>
+    <div>
+      <label
+        for="firstName"
+      >
+        First Name
+         
+        <input
+          id="firstName"
+          placeholder="First name"
+          type="text"
+        />
+      </label>
+      <label
+        for="lastName"
+      >
+        Last Name
+         
+        <input
+          id="lastName"
+          placeholder="Last name"
+          type="text"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
