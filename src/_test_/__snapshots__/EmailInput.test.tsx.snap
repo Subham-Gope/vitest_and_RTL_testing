@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the EmailInput.tsx file > simulated typing  in the input 1`] = `
+<div>
+  <p>
+    This is testing the userEvent.type feature
+     - Testing assignment number: 
+    1
+  </p>
+  <div>
+    <label
+      for="email-input"
+    >
+      Enter Email 
+          
+      <input
+        aria-label="Email-Input"
+        id="email-input"
+        placeholder="xyz@email.com"
+        type="email"
+        value=""
+      />
+    </label>
+  </div>
+</div>
+`;

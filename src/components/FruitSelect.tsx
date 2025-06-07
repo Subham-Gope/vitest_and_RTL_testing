@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
 const FruitSelect: React.FC = () => {
-  const [selectedFruit, setSelectedFruit] = useState("");
+  const [selectedFruit, setSelectedFruit] = useState<string>("");
+
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
+    setSelectedFruit(e.target.value);
+  };
+
   return (
     <div className="h-screen w-screen flex">
       <div className="flex flex-col gap-4 items-center justify-center p-12 m-auto bg-amber-5 w-[300px] h-[300px] bg-red-300">
@@ -12,7 +17,7 @@ const FruitSelect: React.FC = () => {
           id="fruits"
           name="Fruits"
           value={selectedFruit}
-          onChange={(e) => setSelectedFruit(e.target.value)}
+          onChange={handleChange}
           required
           className="text-xl text-gray-100 bg-gray-800 p-4 rounded"
         >

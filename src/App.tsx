@@ -1,10 +1,13 @@
 import React from "react";
-import NameInput2 from "./components/NameInput2";
+import EmailInput from "./components/EmailInput";
 
 const App: React.FC = () => {
   return (
     <>
-      <NameInput2 message={`Testing the userEvent.click feature in RTL`} />
+      <EmailInput
+        message={`This is testing the userEvent.type feature`}
+        assignment={1}
+      />
     </>
   );
 };
