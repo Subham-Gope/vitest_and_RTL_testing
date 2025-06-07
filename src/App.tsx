@@ -1,11 +1,10 @@
 import React from "react";
-
-import TabForm from "./components/TabForm";
+import NameInput2 from "./components/NameInput2";
 
 const App: React.FC = () => {
   return (
     <>
-      <TabForm message={"This a TabForm"} />
+      <NameInput2 message={`Testing the userEvent.click feature in RTL`} />
     </>
   );
 };

@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the NameInput2.tsx component > updates value of input simulating typing 1`] = `
+<div>
+  <p>
+    Testing the userEvent.click feature in RTL
+  </p>
+  <div>
+    <label
+      for="name"
+    >
+      Name:
+       
+      <input
+        id="name"
+        name="name"
+        placeholder="Subham Gope"
+        type="text"
+        value=""
+      />
+       
+    </label>
+  </div>
+</div>
+`;
