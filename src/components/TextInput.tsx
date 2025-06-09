@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import type { ChangeEvent } from "react";
 
 const TextInput: React.FC = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState<string>("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -13,6 +13,7 @@ const TextInput: React.FC = () => {
       <div>
         <label htmlFor="textInput">Enter Your Name</label>
         <input
+          id="textInput"
           type="text"
           value={text}
           onChange={handleChange}

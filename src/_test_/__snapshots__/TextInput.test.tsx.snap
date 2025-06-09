@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the TextInput.tsx file > let's enter a text 1`] = `
+<div>
+  <div>
+    <label
+      for="textInput"
+    >
+      Enter Your Name
+    </label>
+    <input
+      aria-label="Enter Your Name"
+      id="textInput"
+      placeholder="Subham Gope"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
