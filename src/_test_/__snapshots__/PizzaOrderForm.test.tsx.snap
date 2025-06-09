@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the PizzaOrderForm.tsx file > reders, assets default value, selects size and topping 1`] = `
+<div>
+  <div>
+    <h1>
+      Order Your Pizza
+    </h1>
+    <div>
+      <p>
+        Choose Size:
+      </p>
+      <label
+        for="small"
+      >
+        <input
+          id="small"
+          name="size"
+          type="radio"
+          value="small"
+        />
+        small
+      </label>
+      <label
+        for="medium"
+      >
+        <input
+          checked=""
+          id="medium"
+          name="size"
+          type="radio"
+          value="medium"
+        />
+        medium
+      </label>
+      <label
+        for="large"
+      >
+        <input
+          id="large"
+          name="size"
+          type="radio"
+          value="large"
+        />
+        large
+      </label>
+    </div>
+    <div>
+      <label
+        for="topping"
+      >
+        Choose Toppings:
+      </label>
+      <select
+        id="topping"
+        name="topping"
+      >
+        <option
+          value="pepperoni"
+        >
+          pepperoni
+        </option>
+        <option
+          value="mushrooms"
+        >
+          mushrooms
+        </option>
+        <option
+          value="onions"
+        >
+          onions
+        </option>
+        <option
+          value="pineapple"
+        >
+          pineapple
+        </option>
+      </select>
+    </div>
+    <p>
+      Selected:
+       
+      <span
+        class="text-2xl text-pink-500 font-bold p-4 "
+      >
+        medium
+      </span>
+       
+      pizza with
+       
+      <span
+        class="text-2xl text-pink-500 font-bold p-4 "
+      >
+        pepperoni
+      </span>
+    </p>
+  </div>
+</div>
+`;

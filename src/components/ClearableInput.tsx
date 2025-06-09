@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import type { ChangeEvent } from "react";
 
 const ClearableInput: React.FC = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState<string>("");
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setValue(e.target.value);
+  };
+
   return (
     <>
       <div>
@@ -9,7 +15,7 @@ const ClearableInput: React.FC = () => {
           type="text"
           placeholder="Enter Email"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleChange}
         />
         <button onClick={() => setValue("")}>Clear</button>
       </div>

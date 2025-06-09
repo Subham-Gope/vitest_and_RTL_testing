@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import type { ChangeEvent } from "react";
 
 interface NameInput2Props {
   message: string;
 }
 
 const NameInput2: React.FC<NameInput2Props> = ({ message }) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState<string>("");
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setName(e.target.value);
+  };
 
   return (
     <>
@@ -19,7 +24,7 @@ const NameInput2: React.FC<NameInput2Props> = ({ message }) => {
             id="name"
             placeholder="Subham Gope"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleChange}
           />{" "}
         </label>
       </div>
