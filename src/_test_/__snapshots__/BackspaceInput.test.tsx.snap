@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the BackspaceInput.tsx file > should handle backspace key handle 1`] = `
+<div>
+  <div>
+    <label
+      for="backspace-input"
+    >
+      Enter your desired texts
+    </label>
+    <input
+      aria-label="Enter Your Text"
+      placeholder="Enter Your Text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

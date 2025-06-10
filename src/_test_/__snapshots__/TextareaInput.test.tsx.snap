@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing the TextareaInput.tsx file > should type multi-line text 1`] = `
+<div>
+  <div>
+    <label
+      for="text-area"
+    >
+      Enter Your Text
+    </label>
+    <textarea
+      id="text-area"
+      placeholder="enter your text"
+    />
+  </div>
+</div>
+`;
