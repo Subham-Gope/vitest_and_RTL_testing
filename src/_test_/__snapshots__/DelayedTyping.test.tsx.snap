@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the DelayedTyping.tsx file > should type with a delay in keystroke 1`] = `
+<div>
+  <h1>
+    Hello
+  </h1>
+  <div>
+    <label
+      for="delayed-typing"
+    >
+      Delayed Typing Test
+    </label>
+    <input
+      id="delayed-typing"
+      placeholder="Enter your text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
