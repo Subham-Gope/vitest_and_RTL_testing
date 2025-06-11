@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the shiftKeyInput.tsx file > only accepts uppercase when shift is pressed 1`] = `
+<div>
+  <div>
+    <label
+      for="shift-input"
+    >
+      Enter Your Text
+    </label>
+    <input
+      id="shift-input"
+      placeholder="Enter Your Text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
