@@ -1,10 +1,10 @@
 import React from "react";
-import PizzaOrderForm from "./components/PizzaOrderForm";
+import EnterSubmit from "./components/EnterSubmit";
 
 const App: React.FC = () => {
   return (
     <>
-      <PizzaOrderForm />
+      <EnterSubmit message={"Hello there"} />
     </>
   );
 };

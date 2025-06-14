@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the CtrlSaveForm.tsx file > saves the file on ctrl + s 1`] = `
+<div>
+  <div>
+    <label
+      for="ctrl-s-input"
+    >
+      Enter Your Text
+    </label>
+    <input
+      id="ctrl-s-input"
+      placeholder="Example Text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

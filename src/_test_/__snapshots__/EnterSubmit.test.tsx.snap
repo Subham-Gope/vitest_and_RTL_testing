@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the EnterSubmit.tsx component > submits input on ENter key press 1`] = `
+<div>
+  <h1>
+    Hello there we are learning component testing
+  </h1>
+  <div>
+    <label
+      for="enter-submit"
+    >
+      Enter Your Text
+    </label>
+    <input
+      id="enter-submit"
+      placeholder="Enter your text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
