@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the EchoLiteralCharacter.tsx > registers literal input and displays it, like eg: {} 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center h-scree w-screen"
+  >
+    <h1>
+      Message: 
+      Testing Component
+      , Assignment Number: 
+      5
+      , Completion Status: 
+    </h1>
+    <div
+      class="flex flex-col items-center px-8 py-12"
+    >
+      <label
+        for="literal"
+      >
+        Enter your Literal text
+      </label>
+      <textarea
+        id="literal"
+        placeholder="Enter your text"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,10 +1,14 @@
 import React from "react";
-import ShiftToggle from "./components/ShiftToggle";
+import EchoLiteralCharacter from "./components/EchoLiteralCharacter";
 
 const App: React.FC = () => {
   return (
     <>
-      <ShiftToggle message={"Hello there"} num={5} done={true} />
+      <EchoLiteralCharacter
+        message={"Testing Component"}
+        assignmentNumber={5}
+        status={true}
+      />
     </>
   );
 };
