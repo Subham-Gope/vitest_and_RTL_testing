@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ShiftToggle.tsx file > displays the entered text including {} 1`] = `
+<div>
+  <div
+    class="h-screen w-screen flex flex-col justify-center"
+  >
+    <h1>
+      Message: 
+      Hello there
+      , Assignment Number: 
+      5
+      , Completion Status:
+       
+      true
+    </h1>
+    <div
+      class="bg-orange-400 h-[400px] w-[400px] flex items-center justify-center text-2xl text-white font-bold m-auto"
+      tabindex="0"
+    >
+      Toggle Off
+    </div>
+  </div>
+</div>
+`;

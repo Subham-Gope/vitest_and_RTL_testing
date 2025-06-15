@@ -1,10 +1,10 @@
 import React from "react";
-import ArrowKeys from "./components/ArrowKeys";
+import ShiftToggle from "./components/ShiftToggle";
 
 const App: React.FC = () => {
   return (
     <>
-      <ArrowKeys message={"Testing key press"} />
+      <ShiftToggle message={"Hello there"} num={5} done={true} />
     </>
   );
 };
