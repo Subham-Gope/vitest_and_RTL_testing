@@ -1,10 +1,10 @@
 import React from "react";
-import EnterSubmit from "./components/EnterSubmit";
+import ArrowKeys from "./components/ArrowKeys";
 
 const App: React.FC = () => {
   return (
     <>
-      <EnterSubmit message={"Hello there"} />
+      <ArrowKeys message={"Testing key press"} />
     </>
   );
 };
