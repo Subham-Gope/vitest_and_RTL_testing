@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ClickCounter.tsx file > clicks the button to increase the counter value 1`] = `
+<div>
+  <h1>
+    Hello
+  </h1>
+  <div>
+    <h2
+      class="mt-8 text-4xl "
+    >
+      Counter Value: 
+       
+      <span
+        class="font-bold text-blue-600"
+      >
+        0
+      </span>
+    </h2>
+    <button
+      class="bg-orange-400 px-12 py-4 rounded-[16px] text-white font-bold outline-none mt-8"
+    >
+      Click Me
+    </button>
+  </div>
+</div>
+`;

@@ -1,14 +1,10 @@
 import React from "react";
-import ToggleMenu from "./components/ToggleMenu";
+import SubmitForm from "./components/SubmitForm";
 
 const App: React.FC = () => {
   return (
     <div>
-      <ToggleMenu
-        message={"Testing Component"}
-        assignmentNumber={5}
-        status={true}
-      />
+      <SubmitForm />
     </div>
   );
 };

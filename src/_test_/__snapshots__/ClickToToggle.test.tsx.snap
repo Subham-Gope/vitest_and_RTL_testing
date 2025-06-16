@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ClickToToggle.tsx file > clicks a button to toggle the text visibility 1`] = `
+<div>
+  <h1>
+    Hello Guys
+  </h1>
+  <button>
+    Click Me
+  </button>
+</div>
+`;
