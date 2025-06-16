@@ -1,15 +1,15 @@
 import React from "react";
-import EchoLiteralCharacter from "./components/EchoLiteralCharacter";
+import ToggleMenu from "./components/ToggleMenu";
 
 const App: React.FC = () => {
   return (
-    <>
-      <EchoLiteralCharacter
+    <div>
+      <ToggleMenu
         message={"Testing Component"}
         assignmentNumber={5}
         status={true}
       />
-    </>
+    </div>
   );
 };
 

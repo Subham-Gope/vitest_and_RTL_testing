@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ToggleMenu.tsx file > toggles menu on pressing Shift + m 1`] = `
+<div>
+  <div
+    class=" flex flex-col overflow-x-hidden relative min-h-screen"
+  >
+    <h1>
+      Message: 
+      Testing Component
+      , Assigment Number: 
+      5
+      , Completion Status:
+      , Toggle State: 
+      false
+    </h1>
+    <div
+      class="h-screen w-[200px] bg-gray-100 flex  flex-col items-center mt-4 absolute top-[30px] right-0 translate-x-full  opacity-0  transition-all duration-300 ease-in-out delay-100"
+      role="navigation"
+    >
+      <ul
+        class="flex flex-col gap-4 px-8 py-12 list-none decoration-0"
+      >
+        <li>
+          Home
+        </li>
+        <li>
+          About
+        </li>
+        <li>
+          Contact
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
