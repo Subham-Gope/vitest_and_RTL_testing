@@ -1,0 +1,109 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing SubmitForm.tsx file > inputs data and submits the form 1`] = `
+<div>
+  <div
+    class="min-h-screen flex items-center justify-center bg-gray-100 p-4"
+  >
+    <form
+      class="w-full max-w-md bg-white shadow-md rounded-2xl p-8 space-y-6"
+    >
+      <h2
+        class="text-2xl font-bold text-center text-gray-800"
+      >
+        Contact Us
+      </h2>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="name"
+        >
+          Name:
+        </label>
+        <input
+          class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="email"
+        >
+          Email:
+        </label>
+        <input
+          class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="email"
+          name="email"
+          placeholder="johndoe@email.com"
+          required=""
+          type="email"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="age"
+        >
+          Age:
+        </label>
+        <input
+          class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="age"
+          name="age"
+          placeholder="25"
+          required=""
+          type="number"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="contactNo"
+        >
+          Contact Number:
+        </label>
+        <input
+          class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="contactNo"
+          name="contactNo"
+          placeholder="6007844497"
+          required=""
+          type="number"
+          value=""
+        />
+      </div>
+      <div>
+        <label
+          class="block text-sm font-medium text-gray-700"
+          for="message"
+        >
+          Message:
+        </label>
+        <textarea
+          class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="message"
+          name="message"
+          placeholder="Type your message..."
+          required=""
+          rows="4"
+        />
+      </div>
+      <button
+        class="w-full py-2 px-4 text-white font-semibold rounded-lg transition bg-blue-600 hover:bg-blue-700"
+        type="submit"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+`;
