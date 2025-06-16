@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ClearInputFiled.tsx file > enter a text in the input and then clears it 1`] = `
+<div>
+  <div>
+    <label
+      for="clear"
+    >
+      Enter Your Text
+    </label>
+    <input
+      id="clear"
+      name="clear"
+      placeholder="please enter your text"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
