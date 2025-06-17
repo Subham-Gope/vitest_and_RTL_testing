@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ProductImage.tsx file > displays the preview image on hovering the thumbnail 1`] = `
+<div>
+  <div>
+    <img
+      alt="thumbnail"
+      src="https://images.pexels.com/photos/3270223/pexels-photo-3270223.jpeg"
+    />
+  </div>
+</div>
+`;

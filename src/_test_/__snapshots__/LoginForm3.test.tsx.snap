@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the LoginForm3.tsx file > move from one interactable element to the other using the tab 1`] = `
+<div>
+  <form>
+    <input
+      placeholder="username"
+      type="text"
+    />
+    <input
+      placeholder="password"
+      type="text"
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+</div>
+`;
