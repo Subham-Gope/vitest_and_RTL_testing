@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the TooltipButton.tsx file > reveal content on hover 1`] = `
+<div>
+  <div>
+    <button
+      class="px-12 py-4 bg-green-600 text-white text-3xl font-bold"
+    >
+      Hover Me
+    </button>
+  </div>
+</div>
+`;

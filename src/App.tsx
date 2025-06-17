@@ -1,10 +1,10 @@
 import React from "react";
-import FormWithSubmit from "./components/FormWithSubmit";
+import HelpMessage from "./components/HelpMessage";
 
 const App: React.FC = () => {
   return (
     <div>
-      <FormWithSubmit />
+      <HelpMessage />
     </div>
   );
 };

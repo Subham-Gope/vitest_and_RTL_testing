@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the DropdownMenu.sx file > displays menu on hover 1`] = `
+<div>
+  <div>
+    <div
+      aria-label="help"
+      role="button"
+    >
+      Menu
+    </div>
+  </div>
+</div>
+`;

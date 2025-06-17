@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the HelpMessage.tsx file > displays help message onHover 1`] = `
+<div>
+  <div
+    class="min-h-screen w-screen overflow-hidden relative"
+  >
+    <span
+      aria-label="help"
+      class="p-4 bg-red-100 border-red-300 border-[0.5px] absolute top-[40%] left-[50%] -translate-x-[50%]"
+      role="button"
+    >
+      ❓
+    </span>
+    <div>
+       
+    </div>
+  </div>
+</div>
+`;
