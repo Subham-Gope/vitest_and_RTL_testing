@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the FormWithSubmit.tsx > submits form with input values and makes api call request 1`] = `
+<div>
+  <form>
+    <div>
+      <label
+        for="name"
+      >
+        Name:
+      </label>
+      <input
+        id="name"
+        name="name"
+        placeholder="John Doe"
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        for="email"
+      >
+        Email:
+      </label>
+      <input
+        id="email"
+        name="email"
+        placeholder="John@doe.com"
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        for="contactNumber"
+      >
+        Contact Number:
+      </label>
+      <input
+        id="contactNumber"
+        name="contactNumber"
+        placeholder="9898939898"
+        type="text"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        for="message"
+      >
+        Message:
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="message..."
+      />
+    </div>
+    <button
+      type="submit"
+    >
+      Send
+    </button>
+  </form>
+</div>
+`;

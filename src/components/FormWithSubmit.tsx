@@ -20,7 +20,9 @@ const FormWithSubmit: React.FC = () => {
     message: "",
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
     setFormData((prev) => ({
@@ -109,7 +111,7 @@ const FormWithSubmit: React.FC = () => {
           <label htmlFor="contactNumber">Contact Number:</label>
           <input
             type="text"
-            id="contatctNumber"
+            id="contactNumber"
             placeholder="9898939898"
             name="contactNumber"
             value={formData.contactNumber}
@@ -118,14 +120,13 @@ const FormWithSubmit: React.FC = () => {
         </div>
         <div>
           <label htmlFor="message">Message:</label>
-          <input
-            type="text"
+          <textarea
             id="message"
             placeholder="message..."
             name="message"
             value={formData.message}
             onChange={handleChange}
-          />
+          ></textarea>
         </div>
         <button type="submit" disabled={isLoading}>
           {isLoading ? `Submitting` : submitted ? "Submitted" : "Send"}
