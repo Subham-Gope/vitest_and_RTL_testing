@@ -44,7 +44,7 @@ const SubmitForm: React.FC = () => {
         name: formData.name,
         email: formData.email,
         age: Number(formData.age),
-        contactNo: formData.contactNo,
+        contactNo: Number(formData.contactNo),
         message: formData.message,
       },
     };

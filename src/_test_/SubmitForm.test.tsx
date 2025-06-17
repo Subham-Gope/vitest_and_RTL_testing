@@ -6,10 +6,21 @@
 // describe("Testing SubmitForm.tsx file", () => {
 //   test("inputs data and submits the form", async () => {
 //     // Setting up the userEvent
-//     const user = userEvent.setup({ delay: 100 });
+//     const user = userEvent.setup({ delay: 1 });
+
+//     //Adding debugger
+//     screen.debug();
+
+//     // Mocking the global function before rendering
+//     const mockFetch = vi.fn().mockResolvedValue({
+//       ok: true,
+//       json: async () => ({ id: 101 }),
+//     });
+
+//     global.fetch = mockFetch;
 
 //     const { container } = render(<SubmitForm />);
-//     screen.debug();
+
 //     expect(container).toMatchSnapshot();
 
 //     const name = screen.getByLabelText(/name:/i);
@@ -27,7 +38,7 @@
 //     expect(submitBtn).toBeInTheDocument();
 
 //     // Initiating user interaction
-//     await user.type(name, "Subham Gope");
+//     await user.type(name, "Subham Gope", { delay: 100 });
 //     await user.type(email, "subhamgope@gmail.com");
 //     await user.type(age, "24");
 //     await user.type(contactNo, "908978787873");
@@ -35,7 +46,6 @@
 //       message,
 //       "Hi there, this is a test message, I hope this reaches the test result successfully"
 //     );
-//     await user.click(submitBtn);
 
 //     expect(name).toHaveValue("Subham Gope");
 //     expect(email).toHaveValue("subhamgope@gmail.com");
@@ -45,22 +55,17 @@
 //       "Hi there, this is a test message, I hope this reaches the test result successfully"
 //     );
 
+//     // Submitting the form
+//     await user.click(submitBtn);
+
 //     // Testing the submitted form values
-
-//     // Mocking the global function before rendering
-//     const mockFetch = vi.fn().mockResolvedValue({
-//       ok: true,
-//       json: async () => ({ id: 101 }),
-//     });
-
-//     global.fetch = mockFetch;
 
 //     // Wait for the fetch call to happen
 //     await waitFor(
 //       () => {
 //         expect(mockFetch).toHaveBeenCalled();
 //       },
-//       { timeout: 3000 }
+//       { timeout: 2000, interval: 50 }
 //     );
 
 //     // Get arguments from first fetch call
@@ -80,7 +85,7 @@
 //         name: "Subham Gope",
 //         email: "subhamgope@gmail.com",
 //         age: 24,
-//         contactNo: "908978787873",
+//         contactNo: 908978787873,
 //         message:
 //           "Hi there, this is a test message, I hope this reaches the test result successfully",
 //       },
