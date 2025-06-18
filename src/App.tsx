@@ -1,10 +1,10 @@
 import React from "react";
-import HelpMessage from "./components/HelpMessage";
+import FruitSelector from "./components/FruitSelector";
 
 const App: React.FC = () => {
   return (
     <div>
-      <HelpMessage />
+      <FruitSelector />
     </div>
   );
 };

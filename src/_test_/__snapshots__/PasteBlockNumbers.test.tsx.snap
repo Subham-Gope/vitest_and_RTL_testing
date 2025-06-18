@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the PasteBlockNumbers.tsx file > pastes text to clipboard after checking the input is non-number 1`] = `
+<div>
+  <div>
+    <label
+      for="paste"
+    >
+      Paste you text here.
+    </label>
+    <input
+      id="paste"
+      placeholder="paste here"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
