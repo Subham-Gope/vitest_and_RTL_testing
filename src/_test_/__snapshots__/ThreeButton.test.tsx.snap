@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the ThreeButton.tsx > selects button with tab 1`] = `
+<div>
+  <button>
+    First
+  </button>
+  <button>
+    Second
+  </button>
+  <button>
+    Third
+  </button>
+</div>
+`;
