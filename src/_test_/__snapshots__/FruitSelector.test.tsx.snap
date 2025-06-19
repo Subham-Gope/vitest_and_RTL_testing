@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the FruitSelector.tsx file > selects and deslects options 1`] = `
+<div>
+  <div>
+    <label
+      for="fruits"
+    >
+      Select the Fruit you want:
+    </label>
+    <select
+      id="fruits"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        Select
+      </option>
+      <option
+        value="bannana"
+      >
+        Bannana
+      </option>
+      <option
+        value="apple"
+      >
+        Apple
+      </option>
+      <option
+        value="pear"
+      >
+        Pear
+      </option>
+      <option
+        value="jackfruit"
+      >
+        Jack Fruit
+      </option>
+    </select>
+  </div>
+</div>
+`;
