@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the TestOptionText.tsx file > selects multiple values 1`] = `
+<div>
+  <div>
+    <label
+      for="optionText"
+    >
+      Select a Option:
+    </label>
+    <select
+      id="optionText"
+      multiple=""
+    >
+      <option
+        value="mango"
+      >
+        Mango
+      </option>
+      <option
+        value="bannana"
+      >
+        Bannana
+      </option>
+      <option
+        value="pineapple"
+      >
+        Pineapple
+      </option>
+      <option
+        value="papaya"
+      >
+        Papaya
+      </option>
+    </select>
+  </div>
+  <p>
+    Selected Values: 
+  </p>
+</div>
+`;
