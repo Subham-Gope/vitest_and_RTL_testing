@@ -1,0 +1,62 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the SelectCodingLanguages.tsx file > selects multiple options and deselects some from the select box 1`] = `
+<div>
+  <div>
+    <label
+      for="coding-lang"
+    >
+      Select your coding languages:
+    </label>
+    <select
+      id="coding-lang"
+      multiple=""
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        Selected
+      </option>
+      <option
+        value="html"
+      >
+        HTML
+      </option>
+      <option
+        value="css"
+      >
+        CSS
+      </option>
+      <option
+        value="javascript"
+      >
+        javaScript
+      </option>
+      <option
+        value="java"
+      >
+        Java
+      </option>
+      <option
+        value="rust"
+      >
+        Rust
+      </option>
+      <option
+        value="typescript"
+      >
+        TypeScript
+      </option>
+    </select>
+  </div>
+  <div>
+    <span
+      class="text-3xl text-gray-800"
+    >
+      Selected Languages:
+    </span>
+    <ul />
+  </div>
+</div>
+`;
