@@ -1,7 +1,12 @@
 import React from "react";
+import UsernameInput from "./components/UsernameInput";
 
 const App: React.FC = () => {
-  return <div></div>;
+  return (
+    <div>
+      <UsernameInput />
+    </div>
+  );
 };
 
 export default App;
