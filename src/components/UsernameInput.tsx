@@ -21,7 +21,7 @@ const UsernameInput: React.FC = () => {
   return (
     <>
       <div>
-        <label id="focus-blur">Enter you username:</label>
+        <label htmlFor="focus-blur">Enter your username:</label>
         <input
           type="text"
           placeholder="username"

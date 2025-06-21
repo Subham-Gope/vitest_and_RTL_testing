@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing the UsernameInput.tsx file > focuses on a element and then blurs out 1`] = `
+<div>
+  <div>
+    <label
+      for="focus-blur"
+    >
+      Enter your username:
+    </label>
+    <input
+      id="focus-blur"
+      placeholder="username"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
