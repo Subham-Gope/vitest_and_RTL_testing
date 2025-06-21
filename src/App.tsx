@@ -1,10 +1,10 @@
 import React from "react";
-import UsernameInput from "./components/UsernameInput";
+import SetPlaceholderColor from "./components/SetPlaceholderColor";
 
 const App: React.FC = () => {
   return (
     <div>
-      <UsernameInput />
+      <SetPlaceholderColor />
     </div>
   );
 };
